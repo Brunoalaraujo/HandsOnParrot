@@ -12,21 +12,21 @@ function Login() {
     <section className="container">
       <div className="containerForm">
         <div className="head">
-          <img src={Logo} alt="Logo Parrot" />
-          <h3>login</h3>
+          <img src={Logo} alt="Logo Parrot" className="pb-2" />
+          <h3 className="pb-5">login</h3>
         </div>
-        <Form>
-          <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Control type="email" placeholder="email" />
+        <Form className="w-75 mx-auto">
+          <Form.Group className="mb-3 pb-2" controlId="formBasicEmail">
+            <Form.Control type="email" placeholder="email" className="text-center"/>
           </Form.Group>
-          <Form.Group className="mb-3" controlId="formBasicPassword">
-            <Form.Control type="password" placeholder="senha" />
+          <Form.Group className="mb-3 pb-2" controlId="formBasicPassword">
+            <Form.Control type="password" placeholder="senha" className="text-center"/>
           </Form.Group>
-          <Button variant="primary" type="submit">
+          <Button variant="btn mb-5" type="submit">
             Entrar
           </Button>
         </Form>
-        <a href="">cadastre-se</a>
+        <p>cadastre-se</p>
       </div>
     </section>
   );
