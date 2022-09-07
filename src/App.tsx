@@ -1,13 +1,10 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-
-import Login from './components/Login';
-
-import "./styles/global.css"
+import Routes from './Routes';
 
 function App() {
   return (
     <div className="App">
-      <Login/>
+      <Routes/>
     </div>
   );
 }

@@ -1,0 +1,26 @@
+.container {
+  position: relative;
+  height: 100vh;
+  background-image: url("../../assets/images/BACKGROUND.png");
+  background-color: #6033AACC ;
+  background-size: cover;
+  display: grid;
+}
+
+.containerForm {
+    background-color: #fff;
+    position: relative;
+    width: 487px;
+    height: 642px;
+    margin: auto;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.containerForm .head h3 {
+  text-transform: uppercase;
+}
