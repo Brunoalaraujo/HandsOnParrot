@@ -1,5 +1,6 @@
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
+import {Link} from "react-router-dom"
 
 import Logo from "../../assets/images/logoColorido.png";
 
@@ -26,7 +27,7 @@ function Login() {
             Entrar
           </Button>
         </Form>
-        <p>cadastre-se</p>
+        <Link to="/cadastro">cadastre-se</Link>
       </div>
     </section>
   );

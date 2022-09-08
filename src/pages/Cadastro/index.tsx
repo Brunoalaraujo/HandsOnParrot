@@ -1,12 +1,15 @@
-import Button from "react-bootstrap/Button";
-import Form from "react-bootstrap/Form";
+import { useState } from "react";
+import { Button, Form } from "react-bootstrap";
 
 import Logo from "../../assets/images/logoColorido.png";
 
 import "../../styles/global.css";
 import "../Login/index";
 
+
 function Cadastro() {
+  const [cadastro, setCadastro] = useState<string>("");
+  
   return (
     <section className="container">
       <div className="containerForm">
@@ -16,19 +19,41 @@ function Cadastro() {
         </div>
         <Form className="w-75 mx-auto">
           <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Control type="nome" placeholder="nome" className="text-center" />
+            <Form.Control
+              type="nome"
+              placeholder="nome"
+              className="text-center"
+              onChange={(event) => setCadastro(event.target.value)}
+              value={cadastro}
+            />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Control type="email" placeholder="email" className="text-center"/>
+            <Form.Control
+              type="email"
+              placeholder="email"
+              className="text-center"
+            />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicPassword">
-            <Form.Control type="password" placeholder="senha" className="text-center"/>
+            <Form.Control
+              type="password"
+              placeholder="senha"
+              className="text-center"
+            />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicPassword">
-            <Form.Control type="password" placeholder="confirmar senha" className="text-center"/>
+            <Form.Control
+              type="password"
+              placeholder="confirmar senha"
+              className="text-center"
+            />
           </Form.Group>
           <Form.Group className="mb-3 pb-5" controlId="formBasicPassword">
-            <Form.Control type="apto" placeholder="unidade/apartamento" className="text-center"/>
+            <Form.Control
+              type="apto"
+              placeholder="unidade/apartamento"
+              className="text-center"
+            />
           </Form.Group>
           <Button variant="btn" type="submit">
             entrar
