@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { Button, Form } from "react-bootstrap";
 
-import Logo from "../../assets/images/logoColorido.png";
+import ContainerHome from "../../components/ContainerHome";
+import ContainerForm  from "../../components/BoxForm";
+import HeaderForm from "../../components/HeaderForm";
 
-import "../../styles/global.css";
 import "../Login/index";
 
 
@@ -11,12 +12,9 @@ function Cadastro() {
   const [cadastro, setCadastro] = useState<string>("");
   
   return (
-    <section className="container">
-      <div className="containerForm">
-        <div className="head pb-5">
-          <img src={Logo} alt="Logo Parrot" />
-          <h3>cadastro</h3>
-        </div>
+    <ContainerHome>
+      <ContainerForm>
+        <HeaderForm texto="cadastro"/>
         <Form className="w-75 mx-auto">
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Control
@@ -59,8 +57,8 @@ function Cadastro() {
             entrar
           </Button>
         </Form>
-      </div>
-    </section>
+      </ContainerForm>
+    </ContainerHome>
   );
 }
 

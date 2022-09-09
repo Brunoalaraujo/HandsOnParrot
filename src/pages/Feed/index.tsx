@@ -1,15 +1,8 @@
 import React from "react";
+import Header from "../../components/Header";
 
-import "../../styles/global.css";
-
-
-function Header() {
-  
-  return (
-    <header>
-        
-    </header>
-  );
+function Feed() {
+  return <Header />;
 }
 
-export default Header;
+export default Feed;

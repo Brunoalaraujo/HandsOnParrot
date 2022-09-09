@@ -1,21 +1,16 @@
-import Button from "react-bootstrap/Button";
-import Form from "react-bootstrap/Form";
+import {Form, Button} from "react-bootstrap";
 import {Link} from "react-router-dom"
 
-import Logo from "../../assets/images/logoColorido.png";
-
-import "../../styles/global.css"
-import "./styles.css";
+import ContainerHome from "../../components/ContainerHome";
+import ContainerForm  from "../../components/BoxForm";
+import HeaderForm from "../../components/HeaderForm";
 
 
 function Login() {
-  return (
-    <section className="container">
-      <div className="containerForm">
-        <div className="head">
-          <img src={Logo} alt="Logo Parrot" className="pb-2" />
-          <h3 className="pb-5">login</h3>
-        </div>
+   return (
+    <ContainerHome>
+      <ContainerForm>
+        <HeaderForm texto="login"/>
         <Form className="w-75 mx-auto">
           <Form.Group className="mb-3 pb-2" controlId="formBasicEmail">
             <Form.Control type="email" placeholder="email" className="text-center"/>
@@ -23,13 +18,13 @@ function Login() {
           <Form.Group className="mb-3 pb-2" controlId="formBasicPassword">
             <Form.Control type="password" placeholder="senha" className="text-center"/>
           </Form.Group>
-          <Button variant="btn mb-5" type="submit">
+          <Button type='submit'>
             Entrar
           </Button>
         </Form>
-        <Link to="/cadastro">cadastre-se</Link>
-      </div>
-    </section>
+        <Link to="/cadastro" className="mt-4">cadastre-se</Link>
+      </ContainerForm>
+    </ContainerHome>
   );
 }
 
